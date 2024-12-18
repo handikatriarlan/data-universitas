@@ -54,8 +54,9 @@
                             <i class="feather icon-menu"></i>
                         </a>
                         <a href="/dashboard">
-                            <img style="margin-left: 80px" class="img-fluid"
-                                src="{{ asset('own_assets/images/logo.png') }}" alt="Theme-Logo" width="50px" />
+                            <img style="margin-left: 80px; background-color: rgb(255, 255, 255); padding: 5px; border-radius: 5px;"
+                                class="img-fluid" src="{{ asset('own_assets/images/logo.png') }}" alt="Theme-Logo"
+                                width="50px" />
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>
@@ -81,11 +82,6 @@
                                     <ul class="show-notification profile-notification dropdown-menu"
                                         data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <li>
-                                            <a href="/profile">
-                                                <i class="feather icon-user"></i> Profile </a>
-                                        </li>
-                                        <li>
-                                            <hr>
                                             <div id="logout">
                                                 <i class="feather icon-log-out"></i> Logout
                                             </div>
