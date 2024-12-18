@@ -16,12 +16,12 @@
                     </a>
                 </li>
                 <li class>
-                    <a href="/daftar-jlhmhs">
+                    <a href="/daftar-jumlah-mahasiswa">
                         <span class="pcoded-mtext">Jumlah Mahasiswa</span>
                     </a>
                 </li>
                 <li class>
-                    <a href="/daftar-jlhmhsprestasi">
+                    <a href="/daftar-jumlah-mahasiswa-berprestasi">
                         <span class="pcoded-mtext">Jumlah Mahasiswa Prestasi</span>
                     </a>
                 </li>
@@ -31,8 +31,8 @@
                     </a>
                 </li>
                 <li class>
-                    <a href="/daftar-tendik">
-                        <span class="pcoded-mtext">Tenaga Kependidikan</span>
+                    <a href="/daftar-tenaga-pendidik">
+                        <span class="pcoded-mtext">Tenaga Pendidik</span>
                     </a>
                 </li>
                 <li class>

@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UndianController;
 use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\PesertaController;
-use App\Http\Controllers\UndianController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\JumlahMahasiswaBerprestasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +56,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/daftar-admin/update-data', [AdminController::class, 'update']);
     Route::post('/daftar-admin/update-password', [AdminController::class, 'updatePassword']);
     Route::post('/daftar-admin/delete-data', [AdminController::class, 'delete']);
+    
+    Route::get('/daftar-jumlah-mahasiswa-berprestasi', [JumlahMahasiswaBerprestasiController::class, 'index']);
+    Route::post('/daftar-jumlah-mahasiswa-berprestasi/store', [JumlahMahasiswaBerprestasiController::class, 'store']);
+    Route::get('/daftar-jumlah-mahasiswa-berprestasi/edit', [JumlahMahasiswaBerprestasiController::class, 'edit']);
+    Route::post('/daftar-jumlah-mahasiswa-berprestasi/update', [JumlahMahasiswaBerprestasiController::class, 'update']);
+    Route::post('/daftar-jumlah-mahasiswa-berprestasi/delete', [JumlahMahasiswaBerprestasiController::class, 'delete']);
 
     Route::post('/logout', [AuthController::class, 'logout']);
 });

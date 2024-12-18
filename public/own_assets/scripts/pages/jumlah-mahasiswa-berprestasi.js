@@ -1,5 +1,5 @@
 let data_table;
-$(document).ready(function() {
+$(document).ready(function () {
     data_table = $('#order-table').DataTable({
         "order": [
             [3, "desc"]
@@ -12,31 +12,39 @@ $(document).ready(function() {
     });
 });
 
-$("#store").on("click", function(){
+$("#store").on("click", function () {
     $("#large-Modal").modal('hide');
     $.ajax({
-        url: '/daftar-admin/store-admin',
+        url: '/daftar-jumlah-mahasiswa-berprestasi/store',
         method: 'POST',
         data: {
             "_token": $("meta[name='csrf-token']").attr('content'),
-            "nama": $("#nama").val(),
-            "username": $("#username").val(),
-            "password": $("#password").val(),
-            "role": $("#role").val()
+            "tgl_transaksi": $("#tgl_transaksi").val(),
+            "fakultas": $("#fakultas").val(),
+            "prodi": $("#prodi").val(),
+            "jurusan": $("#jurusan").val(),
+            "kategori": $("#kategori").val(),
+            "bidang": $("#bidang").val(),
+            "jenis": $("#jenis").val(),
+            "jumlah": $("#jumlah").val(),
         },
-        success: function(response){
+        success: function (response) {
             if (response.status) {
-                $("#nama").val("");
-                $("#username").val("");
-                $("#password").val("");
-                $("#role").val("");
+                $("#tgl_transaksi").val("");
+                $("#fakultas").val("");
+                $("#prodi").val("");
+                $("#jurusan").val("");
+                $("#kategori").val("");
+                $("#bidang").val("");
+                $("#jenis").val("");
+                $("#jumlah").val("");
 
                 Swal.fire({
                     title: 'Success',
                     text: "Pendaftaran ada berhasil!",
                     icon: 'success'
                 })
-                setInterval(function(){
+                setInterval(function () {
                     location.reload();
                 }, 2000);
             } else {
@@ -52,7 +60,7 @@ $("#store").on("click", function(){
                 })
             }
         },
-        error: function(response){
+        error: function (response) {
             Swal.fire({
                 title: 'Oops..',
                 text: `${response.message}`,
@@ -71,17 +79,22 @@ $(".edit").on('click', function () {
     let id = $(this).data('id');
 
     $.ajax({
-        url: '/daftar-admin/edit-data',
+        url: '/daftar-jumlah-mahasiswa-berprestasi/edit',
         method: 'GET',
         data: {
             "id": id
         },
         success: function (response) {
             if (response.status) {
-                $("#id_user").val(response.data.id);
-                $("#edit_nama").val(response.data.name);
-                $("#edit_username").val(response.data.username);
-                $("#edit_role").val(response.data.role);
+                $("#id").val(response.data.id);
+                $("#edit_tgl_transaksi").val(response.data.tgl_transaksi);
+                $("#edit_fakultas").val(response.data.fakultas);
+                $("#edit_prodi").val(response.data.prodi);
+                $("#edit_jurusan").val(response.data.jurusan);
+                $("#edit_kategori").val(response.data.kategori);
+                $("#edit_bidang").val(response.data.bidang);
+                $("#edit_jenis").val(response.data.jenis);
+                $("#edit_jumlah").val(response.data.jumlah);
 
                 $("#edit-Modal").modal('show');
             } else {
@@ -103,19 +116,24 @@ $(".edit").on('click', function () {
     })
 })
 
-$("#update").on("click", function(){
+$("#update").on("click", function () {
     $("#edit-Modal").modal('hide');
     $.ajax({
-        url: '/daftar-admin/update-data',
+        url: '/daftar-jumlah-mahasiswa-berprestasi/update',
         method: 'POST',
         data: {
             "_token": $("meta[name='csrf-token']").attr('content'),
-            "id": $("#id_user").val(),
-            "name": $("#edit_nama").val(),
-            "username": $("#edit_username").val(),
-            "role": $("#edit_role").val()
+            "id": $("#id").val(),
+            "tgl_transaksi": $("#edit_tgl_transaksi").val(),
+            "fakultas": $("#edit_fakultas").val(),
+            "prodi": $("#edit_prodi").val(),
+            "jurusan": $("#edit_jurusan").val(),
+            "kategori": $("#edit_kategori").val(),
+            "bidang": $("#edit_bidang").val(),
+            "jenis": $("#edit_jenis").val(),
+            "jumlah": $("#edit_jumlah").val(),
         },
-        success: function(response){
+        success: function (response) {
             if (response.status) {
                 Swal.fire({
                     title: 'Success',
@@ -123,7 +141,7 @@ $("#update").on("click", function(){
                     icon: 'success'
                 })
 
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
                 }, 2000);
             } else {
@@ -139,71 +157,17 @@ $("#update").on("click", function(){
                 })
             }
         },
-        error: function(response){
+        error: function (response) {
             Swal.fire({
-                    title: 'Oops..',
-                    text: `${response.message}`,
-                    icon: 'error',
-                    confirmButtonText: 'Oke'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        $("#edit-Modal").modal('show');
-                    }
-                })
-        }
-    })
-});
-
-$(".change-password").on("click", function(){
-    $("#id_user_password").val($(this).data('id'));
-    $("#edit-password").modal('show');
-})
-
-$("#update_password").on("click", function(){
-    $("#edit-password").modal('hide');
-    $.ajax({
-        url: '/daftar-admin/update-password',
-        method: 'POST',
-        data: {
-            "_token": $("meta[name='csrf-token']").attr('content'),
-            "id": $("#id_user_password").val(),
-            "password": $("#edit_password").val()
-        },
-        success: function(response){
-            if (response.status) {
-                Swal.fire({
-                    title: 'Success',
-                    text: "Data berhasil diupdate!",
-                    icon: 'success'
-                })
-
-                setTimeout(function(){
-                    location.reload();
-                }, 2000);
-            } else {
-                Swal.fire({
-                    title: 'Oops..',
-                    text: `${response.message}`,
-                    icon: 'error',
-                    confirmButtonText: 'Oke'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        $("#edit-password").modal('show');
-                    }
-                })
-            }
-        },
-        error: function(response){
-            Swal.fire({
-                    title: 'Oops..',
-                    text: `${response.message}`,
-                    icon: 'error',
-                    confirmButtonText: 'Oke'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        $("#edit-password").modal('show');
-                    }
-                })
+                title: 'Oops..',
+                text: `${response.message}`,
+                icon: 'error',
+                confirmButtonText: 'Oke'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $("#edit-Modal").modal('show');
+                }
+            })
         }
     })
 });
@@ -222,7 +186,7 @@ $(".delete").on("click", function () {
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: '/daftar-admin/delete-data',
+                url: '/daftar-jumlah-mahasiswa-berprestasi/delete',
                 method: 'POST',
                 data: {
                     "_token": $("meta[name='csrf-token']").attr('content'),
@@ -235,7 +199,7 @@ $(".delete").on("click", function () {
                             text: "Berhasil Menghapus Data!",
                             icon: 'success'
                         })
-                        setTimeout(function(){
+                        setTimeout(function () {
                             location.reload();
                         }, 2000);
                     } else {

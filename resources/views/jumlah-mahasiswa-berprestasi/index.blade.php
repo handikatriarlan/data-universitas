@@ -48,7 +48,7 @@
                                             <a href="/"> <i class="feather icon-home"></i> </a>
                                         </li>
                                         <li class="breadcrumb-item" style="float: left;"><a href="#!">Daftar
-                                                Admin</a></li>
+                                                Jumlah Mahasiswa</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -68,36 +68,37 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No. </th>
-                                                        <th>Nama</th>
-                                                        <th>Username</th>
-                                                        <th>Role</th>
+                                                        <th>Tanggal Transaksi</th>
+                                                        <th>Fakultas</th>
+                                                        <th>Jurusan</th>
+                                                        <th>Prodi</th>
+                                                        <th>Kategori</th>
+                                                        <th>Bidang</th>
+                                                        <th>Jenis</th>
+                                                        <th>Jumlah</th>
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <?php $index = 1; ?>
-                                                    @foreach ($users as $user)
+                                                    @foreach ($jumlahMahasiswaBerprestasis as $jumlahMahasiswaBerprestasi)
                                                         <tr>
                                                             <td>{{ $index++ }}</td>
-                                                            <td>{{ $user->name }}</td>
-                                                            <td>{{ $user->username }}</td>
-                                                            <td>
-                                                                @if ($user->role == 'super_admin')
-                                                                    Super Admin
-                                                                @else
-                                                                    Admin
-                                                                @endif
-                                                            </td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->tgl_transaksi }}</td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->fakultas }}</td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->jurusan }}</td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->prodi }}</td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->kategori }}</td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->bidang }}</td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->jenis }}</td>
+                                                            <td>{{ $jumlahMahasiswaBerprestasi->jumlah }}</td>
                                                             <td>
                                                                 <i class="ti-pencil text-success edit"
                                                                     style="font-size: 18px"
-                                                                    data-id={{ $user->id }}></i>
+                                                                    data-id={{ $jumlahMahasiswaBerprestasi->id }}></i>
                                                                 <i class="ti-trash text-danger delete"
                                                                     style="font-size: 18px"
-                                                                    data-id={{ $user->id }}></i>
-                                                                <i class="fa fa-shield text-secondary change-password ml-1"
-                                                                    style="font-size: 18px; cursor: pointer"
-                                                                    data-id={{ $user->id }}></i>
+                                                                    data-id={{ $jumlahMahasiswaBerprestasi->id }}></i>
                                                             </td>
                                                         </tr>
                                                     @endforeach
@@ -130,37 +131,66 @@
                         <div class="card-block">
                             <form id="main" novalidate>
                                 <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Nama</label>
+                                    <label class="col-sm-4 col-form-label">Tanggal Transaksi</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="nama" id="nama"
-                                            placeholder="Masukkan Nama">
+                                        <input type="date" class="form-control" name="tgl_transaksi" id="tgl_transaksi"
+                                            placeholder="Masukkan Tanggal Transaksi">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Username</label>
+                                    <label class="col-sm-4 col-form-label">Fakultas</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="nama" id="username"
-                                            placeholder="Masukkan Username">
+                                        <input type="text" class="form-control" name="fakultas" id="fakultas"
+                                            placeholder="Masukkan Fakultas">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Password</label>
+                                    <label class="col-sm-4 col-form-label">Jurusan</label>
                                     <div class="col-sm-8">
-                                        <input type="password" class="form-control" name="nama" id="password"
-                                            placeholder="Masukkan Password">
+                                        <input type="text" class="form-control" name="jurusan" id="jurusan"
+                                            placeholder="Masukkan Jurusan">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Role</label>
+                                    <label class="col-sm-4 col-form-label">Prodi</label>
                                     <div class="col-sm-8">
-                                        <select class="form-control" name="nama" id="role">
-                                            <option value="0">:: Select Role ::</option>
-                                            <option value="super_admin">Super Admin</option>
-                                            <option value="admin">Admin</option>
-                                        </select>
+                                        <input type="text" class="form-control" name="prodi" id="prodi"
+                                            placeholder="Masukkan Prodi">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Kategori</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="kategori" id="kategori"
+                                            placeholder="Masukkan Kategori">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Bidang</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="bidang" id="bidang"
+                                            placeholder="Masukkan Bidang">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Jenis</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="jenis" id="jenis"
+                                            placeholder="Masukkan Jenis">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Jumlah</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" name="jumlah" id="jumlah"
+                                            placeholder="Masukkan Jumlah">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
@@ -192,31 +222,68 @@
                     <div class="card">
                         <div class="card-block">
                             <form id="main" novalidate>
-                                <input type="hidden" name="" id="id_user">
+                                <input type="hidden" name="" id="id">
                                 <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Nama</label>
+                                    <label class="col-sm-4 col-form-label">Edit Tanggal Transaksi</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="nama" id="edit_nama"
-                                            placeholder="Masukkan Nama">
+                                        <input type="date" class="form-control" name="edit_tgl_transaksi"
+                                            id="edit_tgl_transaksi" placeholder="Masukkan Tanggal Transaksi">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Username</label>
+                                    <label class="col-sm-4 col-form-label">Edit Fakultas</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="nama" id="edit_username"
-                                            placeholder="Masukkan Username">
+                                        <input type="text" class="form-control" name="edit_fakultas"
+                                            id="edit_fakultas" placeholder="Masukkan Fakultas">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Role</label>
+                                    <label class="col-sm-4 col-form-label">Edit Jurusan</label>
                                     <div class="col-sm-8">
-                                        <select class="form-control" name="nama" id="edit_role">
-                                            <option value="0">:: Select Role ::</option>
-                                            <option value="super_admin">Super Admin</option>
-                                            <option value="admin">Admin</option>
-                                        </select>
+                                        <input type="text" class="form-control" name="edit_jurusan" id="edit_jurusan"
+                                            placeholder="Masukkan Jurusan">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Edit Prodi</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="edit_prodi" id="edit_prodi"
+                                            placeholder="Masukkan Prodi">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Edit Kategori</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="edit_kategori"
+                                            id="edit_kategori" placeholder="Masukkan Kategori">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Edit Bidang</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="edit_bidang" id="edit_bidang"
+                                            placeholder="Masukkan Bidang">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Edit Jenis</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="edit_jenis" id="edit_jenis"
+                                            placeholder="Masukkan Jenis">
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Edit Jumlah</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" name="edit_jumlah" id="edit_jumlah"
+                                            placeholder="Masukkan Jumlah">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
@@ -228,43 +295,6 @@
                     <button type="button" class="btn btn-default waves-effect close-btn"
                         data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary waves-effect waves-light" id="update">Save
-                        changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- modal ubah password --}}
-    <div class="modal fade" id="edit-password" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Ubah Password</h4>
-                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="card">
-                        <div class="card-block">
-                            <form id="main" novalidate>
-                                <input type="hidden" name="" id="id_user_password">
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Password Baru</label>
-                                    <div class="col-sm-8">
-                                        <input type="password" class="form-control" name="nama" id="edit_password"
-                                            placeholder="Masukkan Password Baru">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default waves-effect close-btn"
-                        data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary waves-effect waves-light" id="update_password">Save
                         changes</button>
                 </div>
             </div>
@@ -319,5 +349,5 @@
     <script type="text/javascript" src="{{ asset('assets/assets/pages/advance-elements/custom-picker.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/assets/pages/advance-elements/moment-with-locales.min.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('own_assets/scripts/pages/admin.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('own_assets/scripts/pages/jumlah-mahasiswa-berprestasi.js') }}"></script>
 @endsection
