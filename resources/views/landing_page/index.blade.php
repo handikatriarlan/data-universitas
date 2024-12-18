@@ -193,10 +193,10 @@
                         },
                         {
                             data: null,
-                            render:function(data, type, full, meta){
-                                if(data.status_daftar){
+                            render: function(data, type, full, meta) {
+                                if (data.status_daftar) {
                                     return 'Hadir'
-                                }else{
+                                } else {
                                     return ``
                                 }
                             }
@@ -509,15 +509,15 @@
         //                             path = FOTO_PEGAWAI + data.foto;
         //                         }
         //                         return `
-        //                         <div class="card-pemilik">
-        //                             <img class="circle-image btn-popup" src="${path}" alt="Pas Foto" width="100px">
-        //                             <div class="card-text-pemilik">
-        //                                 <div class="flex-container">
-        //                                     <b>${data.nama}</b> <br> (${data.nip})
-        //                                 </div>
-        //                             </div>
-        //                         </div>
-        //         `
+    //                         <div class="card-pemilik">
+    //                             <img class="circle-image btn-popup" src="${path}" alt="Pas Foto" width="100px">
+    //                             <div class="card-text-pemilik">
+    //                                 <div class="flex-container">
+    //                                     <b>${data.nama}</b> <br> (${data.nip})
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //         `
         //                     }
         //                 },
         //                 {
@@ -535,12 +535,12 @@
         //                         let path = "";
         //                         if (data.status_registrasi) {
         //                             path = `<div class="card-pemilik">
-        //                                         <div class="card-text-pemilik">
-        //                                             <div class="flex-container">
-        //                                                 <b>${data.status_registrasi}</b> <br> (${data.waktu_registrasi})
-        //                                             </div>
-        //                                         </div>
-        //                                     </div>`;
+    //                                         <div class="card-text-pemilik">
+    //                                             <div class="flex-container">
+    //                                                 <b>${data.status_registrasi}</b> <br> (${data.waktu_registrasi})
+    //                                             </div>
+    //                                         </div>
+    //                                     </div>`;
         //                         } else {
         //                             path = '';
         //                         }
@@ -552,8 +552,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -564,8 +564,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -576,8 +576,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -854,15 +854,15 @@
         //                             path = FOTO_PEGAWAI + data.foto;
         //                         }
         //                         return `
-        //             <div class="card-pemilik">
-        //                 <img class="circle-image btn-popup" src="${path}" alt="Pas Foto" width="100px">
-        //                 <div class="card-text-pemilik">
-        //                     <div class="flex-container">
-        //                         <b>${data.nama}</b> <br> (${data.nip})
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         `
+    //             <div class="card-pemilik">
+    //                 <img class="circle-image btn-popup" src="${path}" alt="Pas Foto" width="100px">
+    //                 <div class="card-text-pemilik">
+    //                     <div class="flex-container">
+    //                         <b>${data.nama}</b> <br> (${data.nip})
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         `
         //                     }
         //                 },
         //                 {
@@ -876,8 +876,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -888,8 +888,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -900,8 +900,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1184,8 +1184,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1196,8 +1196,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1208,8 +1208,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1495,8 +1495,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1507,8 +1507,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1519,8 +1519,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1807,8 +1807,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1819,8 +1819,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -1831,8 +1831,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2119,8 +2119,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2131,8 +2131,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2143,8 +2143,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2443,8 +2443,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2455,8 +2455,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2467,8 +2467,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2767,8 +2767,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2779,8 +2779,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -2791,8 +2791,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -3091,8 +3091,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_1 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
-        //             //             `
+    //             //                 <b>${data.hadir_1 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_1})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -3103,8 +3103,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_2 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
-        //             //             `
+    //             //                 <b>${data.hadir_2 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_2})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
@@ -3115,8 +3115,8 @@
         //                 //     render:function(data, type, full, meta){
         //                 //         if(data.hadir_3 != ''){
         //                 //             return `
-        //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
-        //             //             `
+    //             //                 <b>${data.hadir_3 ? 'Hadir' : 'Tidak Hadir'}</b> <br> (${data.waktu_3})
+    //             //             `
         //                 //         }else{
         //                 //             return ``
         //                 //         }
