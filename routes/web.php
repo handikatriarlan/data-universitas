@@ -8,6 +8,7 @@ use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\TenagaPendidikController;
 use App\Http\Controllers\JumlahMahasiswaBerprestasiController;
 
 /*
@@ -62,6 +63,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/daftar-jumlah-mahasiswa-berprestasi/edit', [JumlahMahasiswaBerprestasiController::class, 'edit']);
     Route::post('/daftar-jumlah-mahasiswa-berprestasi/update', [JumlahMahasiswaBerprestasiController::class, 'update']);
     Route::post('/daftar-jumlah-mahasiswa-berprestasi/delete', [JumlahMahasiswaBerprestasiController::class, 'delete']);
+    
+    Route::get('/daftar-tenaga-pendidik', [TenagaPendidikController::class, 'index']);
+    Route::post('/daftar-tenaga-pendidik/store', [TenagaPendidikController::class, 'store']);
+    Route::get('/daftar-tenaga-pendidik/edit', [TenagaPendidikController::class, 'edit']);
+    Route::post('/daftar-tenaga-pendidik/update', [TenagaPendidikController::class, 'update']);
+    Route::post('/daftar-tenaga-pendidik/delete', [TenagaPendidikController::class, 'delete']);
 
     Route::post('/logout', [AuthController::class, 'logout']);
 });

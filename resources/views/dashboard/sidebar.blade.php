@@ -26,11 +26,6 @@
                     </a>
                 </li>
                 <li class>
-                    <a href="/daftar-dosen">
-                        <span class="pcoded-mtext">Tenaga Pendidik</span>
-                    </a>
-                </li>
-                <li class>
                     <a href="/daftar-tenaga-pendidik">
                         <span class="pcoded-mtext">Tenaga Pendidik</span>
                     </a>
