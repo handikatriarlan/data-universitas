@@ -48,7 +48,7 @@
                                             <a href="/"> <i class="feather icon-home"></i> </a>
                                         </li>
                                         <li class="breadcrumb-item" style="float: left;"><a href="#!">Daftar
-                                            Jumlah Mahasiswa Berprestasi</a></li>
+                                                Produk Inovasi</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -60,45 +60,34 @@
                             <div class="col-sm-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5>Daftar Jumlah Mahasiswa Berprestasi</h5>
+                                        <h5>Daftar Produk Inovasi</h5>
                                     </div>
                                     <div class="card-block">
                                         <div class="dt-responsive table-responsive">
-                                            <table style="text-align: center" id="order-table" class="table table-striped table-bordered nowrap">
+                                            <table style="text-align: center" id="order-table"
+                                                class="table table-striped table-bordered nowrap">
                                                 <thead>
                                                     <tr>
                                                         <th>No. </th>
                                                         <th>Tanggal Transaksi</th>
-                                                        <th>Fakultas</th>
-                                                        <th>Jurusan</th>
-                                                        <th>Prodi</th>
-                                                        <th>Kategori</th>
-                                                        <th>Bidang</th>
-                                                        <th>Jenis</th>
                                                         <th>Jumlah</th>
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <?php $index = 1; ?>
-                                                    @foreach ($jumlahMahasiswaBerprestasis as $jumlahMahasiswaBerprestasi)
+                                                    @foreach ($produkInovasis as $produkInovasi)
                                                         <tr>
                                                             <td>{{ $index++ }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->tgl_transaksi }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->fakultas }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->jurusan }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->prodi }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->kategori }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->bidang }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->jenis }}</td>
-                                                            <td>{{ $jumlahMahasiswaBerprestasi->jumlah }}</td>
+                                                            <td>{{ $produkInovasi->tgl_transaksi }}</td>
+                                                            <td>{{ $produkInovasi->jumlah }}</td>
                                                             <td>
                                                                 <i class="ti-pencil text-success edit"
                                                                     style="font-size: 18px"
-                                                                    data-id={{ $jumlahMahasiswaBerprestasi->id }}></i>
+                                                                    data-id={{ $produkInovasi->id }}></i>
                                                                 <i class="ti-trash text-danger delete"
                                                                     style="font-size: 18px"
-                                                                    data-id={{ $jumlahMahasiswaBerprestasi->id }}></i>
+                                                                    data-id={{ $produkInovasi->id }}></i>
                                                             </td>
                                                         </tr>
                                                     @endforeach
@@ -135,54 +124,6 @@
                                     <div class="col-sm-8">
                                         <input type="date" class="form-control" name="tgl_transaksi" id="tgl_transaksi"
                                             placeholder="Masukkan Tanggal Transaksi">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Fakultas</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="fakultas" id="fakultas"
-                                            placeholder="Masukkan Fakultas">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Jurusan</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="jurusan" id="jurusan"
-                                            placeholder="Masukkan Jurusan">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Prodi</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="prodi" id="prodi"
-                                            placeholder="Masukkan Prodi">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Kategori</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="kategori" id="kategori"
-                                            placeholder="Masukkan Kategori">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Bidang</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="bidang" id="bidang"
-                                            placeholder="Masukkan Bidang">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Jenis</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="jenis" id="jenis"
-                                            placeholder="Masukkan Jenis">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
@@ -228,54 +169,6 @@
                                     <div class="col-sm-8">
                                         <input type="date" class="form-control" name="edit_tgl_transaksi"
                                             id="edit_tgl_transaksi" placeholder="Masukkan Tanggal Transaksi">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Edit Fakultas</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="edit_fakultas"
-                                            id="edit_fakultas" placeholder="Masukkan Fakultas">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Edit Jurusan</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="edit_jurusan" id="edit_jurusan"
-                                            placeholder="Masukkan Jurusan">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Edit Prodi</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="edit_prodi" id="edit_prodi"
-                                            placeholder="Masukkan Prodi">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Edit Kategori</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="edit_kategori"
-                                            id="edit_kategori" placeholder="Masukkan Kategori">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Edit Bidang</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="edit_bidang" id="edit_bidang"
-                                            placeholder="Masukkan Bidang">
-                                        <span class="messages"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-4 col-form-label">Edit Jenis</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="edit_jenis" id="edit_jenis"
-                                            placeholder="Masukkan Jenis">
                                         <span class="messages"></span>
                                     </div>
                                 </div>
@@ -349,5 +242,5 @@
     <script type="text/javascript" src="{{ asset('assets/assets/pages/advance-elements/custom-picker.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/assets/pages/advance-elements/moment-with-locales.min.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('own_assets/scripts/pages/jumlah-mahasiswa-berprestasi.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('own_assets/scripts/pages/produk-inovasi.js') }}"></script>
 @endsection

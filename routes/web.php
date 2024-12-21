@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UndianController;
+use App\Http\Controllers\ProdukInovasiController;
 use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\DashboardController;
@@ -69,6 +70,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/daftar-tenaga-pendidik/edit', [TenagaPendidikController::class, 'edit']);
     Route::post('/daftar-tenaga-pendidik/update', [TenagaPendidikController::class, 'update']);
     Route::post('/daftar-tenaga-pendidik/delete', [TenagaPendidikController::class, 'delete']);
+    
+    Route::get('/daftar-inovasi', [ProdukInovasiController::class, 'index']);
+    Route::post('/daftar-inovasi/store', [ProdukInovasiController::class, 'store']);
+    Route::get('/daftar-inovasi/edit', [ProdukInovasiController::class, 'edit']);
+    Route::post('/daftar-inovasi/update', [ProdukInovasiController::class, 'update']);
+    Route::post('/daftar-inovasi/delete', [ProdukInovasiController::class, 'delete']);
 
     Route::post('/logout', [AuthController::class, 'logout']);
 });
