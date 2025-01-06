@@ -3,13 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\UndianController;
-use App\Http\Controllers\ProdukInovasiController;
 use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ProdukInovasiController;
 use App\Http\Controllers\TenagaPendidikController;
+use App\Http\Controllers\JumlahMahasiswaController;
+use App\Http\Controllers\PublikasiPenelitianController;
+use App\Http\Controllers\PengabdianMasyarakatController;
 use App\Http\Controllers\JumlahMahasiswaBerprestasiController;
 
 /*
@@ -77,6 +81,30 @@ Route::middleware('auth')->group(function () {
     Route::post('/daftar-inovasi/update', [ProdukInovasiController::class, 'update']);
     Route::post('/daftar-inovasi/delete', [ProdukInovasiController::class, 'delete']);
 
+    Route::get('/daftar-alumni', [AlumniController::class, 'index']);
+    Route::post('/daftar-alumni/store', [AlumniController::class, 'store']);
+    Route::get('/daftar-alumni/edit', [AlumniController::class, 'edit']);
+    Route::post('/daftar-alumni/update', [AlumniController::class, 'update']);
+    Route::post('/daftar-alumni/delete', [AlumniController::class, 'delete']);
+
+    Route::get('/daftar-pengabdian', [PengabdianMasyarakatController::class, 'index']);
+    Route::post('/daftar-pengabdian/store', [PengabdianMasyarakatController::class, 'store']);
+    Route::get('/daftar-pengabdian/edit', [PengabdianMasyarakatController::class, 'edit']);
+    Route::post('/daftar-pengabdian/update', [PengabdianMasyarakatController::class, 'update']);
+    Route::post('/daftar-pengabdian/delete', [PengabdianMasyarakatController::class, 'delete']);
+
+    Route::get('/daftar-penelitian', [PublikasiPenelitianController::class, 'index']);
+    Route::post('/daftar-penelitian/store', [PublikasiPenelitianController::class, 'store']);
+    Route::get('/daftar-penelitian/edit', [PublikasiPenelitianController::class, 'edit']);
+    Route::post('/daftar-penelitian/update', [PublikasiPenelitianController::class, 'update']);
+    Route::post('/daftar-penelitian/delete', [PublikasiPenelitianController::class, 'delete']);
+    
+    Route::get('/daftar-jumlah-mahasiswa', [JumlahMahasiswaController::class, 'index']);
+    Route::post('/daftar-jumlah-mahasiswa/store', [JumlahMahasiswaController::class, 'store']);
+    Route::get('/daftar-jumlah-mahasiswa/edit', [JumlahMahasiswaController::class, 'edit']);
+    Route::post('/daftar-jumlah-mahasiswa/update', [JumlahMahasiswaController::class, 'update']);
+    Route::post('/daftar-jumlah-mahasiswa/delete', [JumlahMahasiswaController::class, 'delete']);
+    
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 

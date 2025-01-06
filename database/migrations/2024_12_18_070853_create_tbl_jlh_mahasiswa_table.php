@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tbl_jlh_mahasiswa', function (Blueprint $table) {
             $table->id();
+            $table->date('tgl_transaksi');
             $table->string('fakultas', 100);
             $table->string('jurusan', 100);
             $table->string('prodi', 100);
